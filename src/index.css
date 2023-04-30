@@ -1,0 +1,82 @@
+.app {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: rgb(156, 155, 155);
+}
+
+.gameboard {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 15px solid blue;
+  box-sizing: border-box;
+}
+
+.cross {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  rotate: 45deg;
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+}
+
+.cross::before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross::after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+.winCircle {
+  font-size: 30px;
+  color: blue;
+  margin: "0 auto";
+  display: inline;
+  /* margin-top: 20px; */
+  position: relative;
+}
+
+.winCross {
+  font-size: 30px;
+  color: red;
+  margin: "0 auto";
+  display: inline;
+  /* margin-top: 20px; */
+  position: relative;
+}
